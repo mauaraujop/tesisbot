@@ -40,6 +40,7 @@ def ReceivedMessage():
         return "EVENT_RECEIVED"
     
 def GenerateMessage(text, number):
+    text = text.lower()
     if "text" in text:
         data = util.TextMessage("Text", number)
     if "format" in text:
