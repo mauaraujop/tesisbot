@@ -32,13 +32,23 @@ def ReceivedMessage():
         number = message["from"]
         
         text = util.GetTextUser(message)
-        GenerateMessage(text, number)
+        ProcessMessage(text, number)
         print(text)
 
         return "EVENT_RECEIVED"
     except:
         return "EVENT_RECEIVED"
     
+def ProcessMessage(text, number):
+    text = text.lower()
+
+    if "hola" in text:
+        data = util.TextMessage("Hola, soy el asistente virtual de OFICOMP. Para comenzar, escribe 'Hola' o 'Menu'. ", number)
+    elif "gracias" in text:
+        data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
+
+    whatsappservice.SendMessageWhatsapp(data)
+
 def GenerateMessage(text, number):
     text = text.lower()
     if "text" in text:
