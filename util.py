@@ -171,5 +171,49 @@ def ListMessage(number):
         }
     }
 }
+def PruebaMessage(number):
+    data = {
+        "messaging_product": "whatsapp",
+        "recipient_type": "individual",
+        "to": number,
+        "type": "interactive",
+        "interactive": {
+            "type": "prueba",
+            "header": {
+                "type": "image",
+                "image": {
+                    "link": "https://images.wikidexcdn.net/mwuploads/wikidex/9/94/latest/20230204063131/EP1229_Oshawott_de_Ash.png"  # Reemplaza con la URL de tu imagen
+                }
+            },
+            "body": {
+                "text": "¡Bienvenido a Oficomp Explora nuestros artículos de oficina y equipos de cómputo."
+            },
+            "action": {
+                "buttons": [
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "001",
+                            "title": "Ver Productos"
+                        }
+                    },
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "002",
+                            "title": "Soporte Técnico"
+                        }
+                    },
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "003",
+                            "title": "Contáctanos"
+                        }
+                    }
+                ]
+            }
+        }
+    }
     return data
 

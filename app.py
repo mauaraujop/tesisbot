@@ -54,6 +54,8 @@ def GenerateMessage(text, number):
         data = util.ButtonsnMessage(number)
     if "list" in text:
         data = util.ListMessage(number)
+    if "prueba" in text:
+        data = util.PruebaMessage(number)
 
     whatsappservice.SendMessageWhatsapp(data)
 
