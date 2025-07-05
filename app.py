@@ -57,6 +57,9 @@ def GenerateMessage(text, number):
         data = util.ListMessage(number)
     if "prueba" in text:
         data = util.PruebaMessage(number)
+    else:
+        # Si ninguna palabra clave anterior coincide, envía un mensaje por defecto
+        data = util.TextMessage("Lo siento, no entendí tu mensaje. Intenta decir 'hola' o 'menu'.", number)
 
     whatsappservice.SendMessageWhatsapp(data)
 
