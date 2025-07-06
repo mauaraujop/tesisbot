@@ -35,7 +35,7 @@ def TextFormatMessage(number):
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
+            "type": "format",
             "text": {
                 "preview_url": False,
                 "body": "*Hola usuarioo*\n - _hola_ -\n hola otra vez "
@@ -47,7 +47,7 @@ def ImageMessage(number):
     data ={
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
-            "to": "584247526123",
+            "to": number,
             "type": "image",
             "image": {
                 "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png"
