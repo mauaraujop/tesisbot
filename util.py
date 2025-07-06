@@ -35,10 +35,10 @@ def TextFormatMessage(number):
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
             "to": number,
-            "type": "format",
+            "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "*Holaeeeeeeeeeeeeeeee"
+                "body": "*Hola usuarioo* - _hola_ - "
             }
         }
     return data
@@ -47,7 +47,7 @@ def ImageMessage(number):
     data ={
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
-            "to": number,
+            "to": "584247526123",
             "type": "image",
             "image": {
                 "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png"
@@ -186,7 +186,7 @@ def PruebaMessage(number):
                 }
             },
             "body": {
-                "text": "¡Bienvenido a Oficomp Explora nuestros artículos de oficina y equipos de cómputo."
+                "text": "¡Bienvenido a [Nombre de tu Empresa]! Explora nuestros artículos de oficina y equipos de cómputo."
             },
             "action": {
                 "buttons": [
