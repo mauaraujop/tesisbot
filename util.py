@@ -38,7 +38,7 @@ def TextFormatMessage(number):
             "type": "format",
             "text": {
                 "preview_url": False,
-                "body": "*Hola usuarioo*\n - _hola_ -\n hola otra vez "
+                "body": "*Hola usuarioo*\n - _hola_ -\n hola otra vez"
             }
         }
     return data
