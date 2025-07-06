@@ -38,7 +38,7 @@ def TextFormatMessage(number):
             "type": "text",
             "text": {
                 "preview_url": False,
-                "body": "*¡Vaya!* No consigo entender a qué te refieres 😢.\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*"
+                "body": "*Hola usuarioo* - _hola_ - "
             }
         }
     return data

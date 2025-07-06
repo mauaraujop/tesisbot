@@ -50,6 +50,8 @@ def ProcessMessage(text, number):
         data = util.TextFormatMessage(number)
     elif "image" in text:
         data = util.ImageMessage(number)
+    else:
+        data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
 
     whatsappservice.SendMessageWhatsapp(data)
 
