@@ -35,7 +35,7 @@ def TextFormatMessage(number):
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
             "to": number,
-            "type": "format",
+            "type": "text",
             "text": {
                 "preview_url": False,
                 "body": "*Hola usuarioo*\n - _hola_ -\n hola otra vez "

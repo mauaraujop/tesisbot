@@ -55,8 +55,6 @@ def ProcessMessage(text, number):
 
 def GenerateMessage(text, number):
     text = text.lower()
-    if "text" in text:
-        data = util.TextMessage("Text", number)
     if "format" in text:
         data = util.TextFormatMessage(number)
     if "image" in text:
