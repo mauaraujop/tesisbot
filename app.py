@@ -47,7 +47,7 @@ def ProcessMessage(text, number):
     elif "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
     elif "format" in text:
-        data = util.TextMessage(number)
+        data = util.TextFormatMessage(number)
     elif "image" in text:
         data = util.ImageMessage(number)
 
