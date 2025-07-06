@@ -46,6 +46,8 @@ def ProcessMessage(text, number):
         data = util.TextMessage("Hola, soy el asistente virtual de OFICOMP. Para comenzar, escribe 'Hola' o 'Menu'. ", number)
     elif "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
+    elif "format" in text:
+        data = util.TextMessage(number)
 
     whatsappservice.SendMessageWhatsapp(data)
 
