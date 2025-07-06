@@ -35,10 +35,10 @@ def TextFormatMessage(number):
             "messaging_product": "whatsapp",    
             "recipient_type": "individual",
             "to": number,
-            "type": "text",
+            "type": "format",
             "text": {
                 "preview_url": False,
-                "body": "hola "
+                "body": "*Hola usuarioo*\n - _hola_ -\n hola otra vez "
             }
         }
     return data
