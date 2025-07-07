@@ -44,7 +44,7 @@ def ProcessMessage(text, number):
     listData = []
 
     if "hola" in text:
-        data = util.TextMessage("Hola, soy el asistente virtual de OFICOMP. Para comenzar, escribe 'Hola' o 'Menu'. ", number)
+        data = util.TextMessage("👋 ¡Hola! Soy tu asistente virtual de OFICOMP, listo para ayudarte con todo lo que tu oficina necesita. ¿En qué puedo asistirte hoy? Escribe 'Menú' para ver mis opciones o hazme una pregunta. ✨", number)
         dataMenu = util.ListMessage(number)
 
         listData.append(data)
@@ -59,6 +59,10 @@ def ProcessMessage(text, number):
         data = util.ListMessage(number)
     elif "button" in text:
             data = util.ButtonsnMessage(number)
+    elif "ubicación" in text:
+        data = util.LocationMessage(number)
+    elif "archivadores" in text:
+        data = util.TextMessage("👋 Archivador Lomo Ancho t/carta - Unidad \n Archivador Acordeón Plástico t/carta - Unidad \n Archivador Acordeón Plástico t/oficio - Unidad \n Archivador Acordeón de Cartón Mayka t/carta - Unidad \n Archivador Acordeón de Cartón Mayka t/ giro - Unidad \n Archivador Acordeón de Cartón Mayka t/oficio - Unidad ✨", number)
     else:
         data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
     for item in listData:

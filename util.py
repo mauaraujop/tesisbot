@@ -129,10 +129,10 @@ def ListMessage(number):
     "interactive": {
         "type": "list",
         "body": {
-            "text": "✅ I have these options"
+            "text": "Para hacer tu búsqueda más eficiente, te presento nuestras opciones clave. ✨ ¿Qué necesitas hoy?"
         },
         "footer": {
-            "text": "Select an option"
+            "text": "Seleccione una Opción"
         },
         "action": {
             "button": "Opciones",
@@ -161,24 +161,34 @@ def ListMessage(number):
                             "description": "."
                         },
                         {
-                            "id": "main-ganchos",
-                            "title": "Ganchos",
+                            "id": "main-creyones",
+                            "title": "Creyones",
+                            "description": "."
+                        },
+                        {
+                            "id": "main-boligrafos",
+                            "title": "Bolígrafos",
+                            "description": "."
+                        },
+                        {
+                            "id": "main-hojas",
+                            "title": "Hojas",
                             "description": "."
                         }
                     ]
                 },
                 {
-                    "title": "📍center of attention",
+                    "title": "📍Cetro de Atención",
                     "rows": [
                         {
                             "id": "main-agency",
-                            "title": "Español",
-                            "description": "Your can visit our agency"
+                            "title": "Contactar un Asesor de Pagos",
+                            "description": "Para efectuar un pago o deuda"
                         },
                         {
-                            "id": "main-contact",
-                            "title": "Castellano",
-                            "description": "One of our agents will assist you"
+                            "id": "main-location",
+                            "title": "Ubicación",
+                            "description": "Puedes visitar nuestra locación"
                         }
                     ]
                 }
