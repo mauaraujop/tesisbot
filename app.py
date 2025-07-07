@@ -41,9 +41,14 @@ def ReceivedMessage():
     
 def ProcessMessage(text, number):
     text = text.lower()
+    listData = []
 
     if "hola" in text:
         data = util.TextMessage("Hola, soy el asistente virtual de OFICOMP. Para comenzar, escribe 'Hola' o 'Menu'. ", number)
+        dataMenu = util.ListMessage(number)
+
+        listData.append(data)
+        listData.append(dataMenu)
     elif "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
     elif "format" in text:
@@ -56,8 +61,8 @@ def ProcessMessage(text, number):
             data = util.ButtonsnMessage(number)
     else:
         data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
-
-    whatsappservice.SendMessageWhatsapp(data)
+    for item in listData:
+        whatsappservice.SendMessageWhatsapp(item)
 
 def GenerateMessage(text, number):
     text = text.lower()
