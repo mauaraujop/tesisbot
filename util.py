@@ -135,20 +135,35 @@ def ListMessage(number):
             "text": "Select an option"
         },
         "action": {
-            "button": "See options",
+            "button": "Opciones",
             "sections": [
                 {
-                    "title": "Buy and sell products",
+                    "title": "Inventario",
                     "rows": [
                         {
-                            "id": "main-buy",
-                            "title": "Buy",
-                            "description": "Buy the best product your home"
+                            "id": "main-engrapadora",
+                            "title": "Engrapadoras",
+                            "description": "."
                         },
                         {
-                            "id": "main-sell",
-                            "title": "Sell",
-                            "description": "Sell your products"
+                            "id": "main-archivadores",
+                            "title": "Archivadores",
+                            "description": "."
+                        },
+                        {
+                            "id": "main-blocks",
+                            "title": "Blocks",
+                            "description": "."
+                        },
+                        {
+                            "id": "main-cartulinas",
+                            "title": "Cartulinas",
+                            "description": "."
+                        },
+                        {
+                            "id": "main-ganchos",
+                            "title": "Ganchos",
+                            "description": "."
                         }
                     ]
                 },
@@ -157,12 +172,12 @@ def ListMessage(number):
                     "rows": [
                         {
                             "id": "main-agency",
-                            "title": "Agency",
+                            "title": "Español",
                             "description": "Your can visit our agency"
                         },
                         {
                             "id": "main-contact",
-                            "title": "Contact center",
+                            "title": "Castellano",
                             "description": "One of our agents will assist you"
                         }
                     ]
