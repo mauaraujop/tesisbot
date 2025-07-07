@@ -43,13 +43,8 @@ def ProcessMessage(text, number):
     text = text.lower()
     listData = []
 
-    if "hola" in text:
-        data = util.TextMessage("👋 ¡Hola! Soy tu asistente virtual de OFICOMP, listo para ayudarte con todo lo que tu oficina necesita. ¿En qué puedo asistirte hoy? Escribe 'Menú' para ver mis opciones o hazme una pregunta. ✨", number)
-        dataMenu = util.ListMessage(number)
 
-        listData.append(data)
-        listData.append(dataMenu)
-    elif "gracias" in text:
+    if "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
     elif "format" in text:
         data = util.TextFormatMessage(number)
