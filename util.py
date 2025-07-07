@@ -127,7 +127,7 @@ def ListMessage(number):
     "to": number,
     "type": "interactive",
     "interactive": {
-        "type": "hola",
+        "type": "list",
         "body": {
             "text": "✅ I have these options"
         },

@@ -44,13 +44,14 @@ def ProcessMessage(text, number):
 
     if "hola" in text:
         data = util.TextMessage("Hola, soy el asistente virtual de OFICOMP. Para comenzar, escribe 'Hola' o 'Menu'. ", number)
-        data = util.ListMessage(number)
     elif "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
     elif "format" in text:
         data = util.TextFormatMessage(number)
     elif "image" in text:
         data = util.ImageMessage(number)
+    elif "list" in text:
+        data = util.ListMessage(number)
     else:
         data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
 
