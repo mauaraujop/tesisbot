@@ -143,22 +143,37 @@ def ListMessage(number):
                         {
                             "id": "main-engrapadora",
                             "title": "Engrapadoras",
-                            "description": "."
+                            "description": " "
                         },
                         {
                                 "id": "main-archivadores",
                                 "title": "Archivadores",
-                                "description": "."
+                                "description": " "
                         },
                         {
                                 "id": "main-blocks",
                                 "title": "Blocks",
-                                "description": "."
+                                "description": " "
                         },
                         {
                                 "id": "main-cartulinas",
                                 "title": "Cartulinas",
-                                "description": "."
+                                "description": ""
+                        },
+                        {
+                                "id": "main-sobre",
+                                "title": "Sobres",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-cintas",
+                                "title": "Cintas Adhesivas",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-boligrafos",
+                                "title": "Bolígrafos",
+                                "description": " "
                         },
 
                     ]
