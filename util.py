@@ -141,39 +141,9 @@ def ListMessage(number):
                     "title": "Inventario",
                     "rows": [
                         {
-                            "id": "main-engrapadora",
-                            "title": "Engrapadoras",
+                            "id": "main-inventario",
+                            "title": "Ver Inventario",
                             "description": " "
-                        },
-                        {
-                                "id": "main-archivadores",
-                                "title": "Archivadores",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-blocks",
-                                "title": "Blocks",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-cartulinas",
-                                "title": "Cartulinas",
-                                "description": ""
-                        },
-                        {
-                                "id": "main-sobre",
-                                "title": "Sobres",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-cintas",
-                                "title": "Cintas Adhesivas",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-boligrafos",
-                                "title": "Bolígrafos",
-                                "description": " "
                         }
                     ]
                 },
