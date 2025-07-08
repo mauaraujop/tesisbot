@@ -174,26 +174,6 @@ def ListMessage(number):
                                 "id": "main-boligrafos",
                                 "title": "Bolígrafos",
                                 "description": " "
-                        },
-                        {
-                                "id": "main-creyones",
-                                "title": "Creyones",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-ganchos",
-                                "title": "Ganchos",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-tijeras",
-                                "title": "Tijeras",
-                                "description": " "
-                        },
-                        {
-                                "id": "main-tirro",
-                                "title": "Tirros",
-                                "description": " "
                         }
                     ]
                 },
