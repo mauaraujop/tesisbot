@@ -50,12 +50,9 @@ def ProcessMessage(text, number):
         listData.append(data)
         listData.append(dataMenu)
 
-        if "gracias" in text:
-            data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
-            listData.append(data)
-        else:
-            data = util.TextMessage("buenas",number)
-            listData.append(data)
+    elif "gracias" in text:
+        data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
+        listData.append(data)
     elif "format" in text:
         data = util.TextFormatMessage(number)
         listData.append(data)
@@ -64,6 +61,9 @@ def ProcessMessage(text, number):
         listData.append(data)
     elif "audio" in text: 
         data = util.AudioMessage(number) 
+        listData.append(data)
+    elif "Invetario" in text:
+        data = util.TextMessage("¿Qué quieres conocer sobre nuestras categorías de productos?\nElige una opción 👇:\n\nAquí tienes nuestras categorías de productos:\n\n1️⃣ Accesorios\n2️⃣ Almohadillas\n3️⃣ Archivadores\n4️⃣ Blocks\n5️⃣ Bolígrafos\n6️⃣ Borradores\n7️⃣ Cajas Chicas\n8️⃣ Carpetas\n9️⃣ Carteleras\n🔟 Chinches\n1️⃣1️⃣ Cintas\n1️⃣2️⃣ Clips\n1️⃣3️⃣ Compases\n1️⃣4️⃣ Correctores\n1️⃣5️⃣ Creyones\n1️⃣6️⃣ Cuchillas\n1️⃣7️⃣ Cuenta Fácil\n1️⃣8️⃣ Engrapadoras\n1️⃣9️⃣ Escarchas\n2️⃣0️⃣ Fichas", number)
         listData.append(data) 
     elif "list" in text:
         data = util.ListMessage(number)
