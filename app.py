@@ -42,11 +42,11 @@ def ReceivedMessage():
 def ProcessMessage(text, number):
     text = text.lower()
     listData = []
-
+    
     if "hola" in text or "opcion" in text:
         data = util.TextMessage("👋 ¡Hola! Soy tu asistente virtual de OFICOMP, listo para ayudarte con todo lo que tu oficina necesita. ¿En qué puedo asistirte hoy? Escribe 'Menú' para ver mis opciones o hazme una pregunta. ✨", number)
         dataMenu = util.ListMessage(number)
-        dataVolver = util.ReturnMessage(dataVolver)
+    
         listData.append(data)
         listData.append(dataMenu)
 
