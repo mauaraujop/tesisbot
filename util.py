@@ -129,20 +129,20 @@ def ListMessage(number):
     "interactive": {
         "type": "list",
         "body": {
-            "text": "✅ I have these options"
+            "text": "Para hacer tu búsqueda más eficiente, te presento nuestras opciones clave. ✨ ¿Qué necesitas hoy?"
         },
         "footer": {
-            "text": "Select an option"
+            "text": "Seleccione una Opción"
         },
         "action": {
-            "button": "See options",
+            "button": "Opciones",
             "sections": [
                 {
-                    "title": "Buy and sell products",
+                    "title": "Inventario",
                     "rows": [
                         {
-                            "id": "main-buy",
-                            "title": "Buy",
+                            "id": "main-engrapadora",
+                            "title": "Engrapadoras",
                             "description": "Buy the best product your home"
                         },
                         {
