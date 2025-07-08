@@ -71,6 +71,9 @@ def ProcessMessage(text, number):
     elif "3" in text:
         data = util.TextMessage("⭐Archivador Lomo Ancho t/carta - Unidad\n⭐Archivador Acordeón Plástico t/carta - Unidad\n⭐Archivador Acordeón Plástico t/oficio - Unidad", number)
         dataVolver = util.ReturnMessage(dataVolver)
+
+        listData.append(data)
+        listData.append(dataVolver)
     elif "button" in text:
             data = util.ButtonsnMessage(number)
             listData.append(data)
