@@ -59,9 +59,9 @@ def ProcessMessage(text, number):
     elif "image" in text:
         data = util.ImageMessage(number)
         listData.append(data)
-    elif "audio" in text: # <<<--- AGREGA ESTA CONDICIÓN
-        data = util.AudioMessage(number) # <<<--- Para que envíe el audio programado
-        listData.append(data) # <<<--- Y lo añada a la lista para enviar
+    elif "audio" in text: 
+        data = util.AudioMessage(number) 
+        listData.append(data) 
     elif "list" in text:
         data = util.ListMessage(number)
         listData.append(data)

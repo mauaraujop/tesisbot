@@ -143,13 +143,24 @@ def ListMessage(number):
                         {
                             "id": "main-engrapadora",
                             "title": "Engrapadoras",
-                            "description": "Buy the best product your home"
+                            "description": "."
                         },
                         {
-                            "id": "main-sell",
-                            "title": "Sell",
-                            "description": "Sell your products"
-                        }
+                                "id": "main-archivadores",
+                                "title": "Archivadores",
+                                "description": "."
+                        },
+                        {
+                                "id": "main-blocks",
+                                "title": "Blocks",
+                                "description": "."
+                        },
+                        {
+                                "id": "main-cartulinas",
+                                "title": "Cartulinas",
+                                "description": "."
+                        },
+
                     ]
                 },
                 {
