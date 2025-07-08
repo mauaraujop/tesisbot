@@ -50,9 +50,12 @@ def ProcessMessage(text, number):
         listData.append(data)
         listData.append(dataMenu)
 
-    elif "gracias" in text:
-        data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
-        listData.append(data)
+        if "gracias" in text:
+            data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
+            listData.append(data)
+        else:
+            data = util.TextMessage("hola",number)
+            listData.append(data)
     elif "format" in text:
         data = util.TextFormatMessage(number)
         listData.append(data)
