@@ -197,7 +197,7 @@ def ReturnMessage(number):
                             {
                                 "type": "reply",
                                 "reply": {
-                                    "id": "002",
+                                    "id": "003",
                                     "title": "⏪ Volver a Menú Principal"
                                 }
                             }
