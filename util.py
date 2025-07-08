@@ -167,6 +167,45 @@ def ListMessage(number):
     }
 }
     return data
+def ReturnMessage(number):
+    data ={
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": number,
+                "type": "interactive",
+                "interactive": {
+                    "type": "button",
+                    "body": {
+                        "text": "💲¿Deseas realizar una compra?💲"
+                    },
+                    "action": {
+                        "buttons": [
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "001",
+                                    "title": "Comprar 💵"
+                                }
+                            },
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "002",
+                                    "title": "◀ Regresar"
+                                }
+                            },
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "002",
+                                    "title": "⏪ Volver a Menú Principal"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+    return data
 def PruebaMessage(number):
     data = {
         "messaging_product": "whatsapp",
