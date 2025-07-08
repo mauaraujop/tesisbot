@@ -135,7 +135,7 @@ def ListMessage(number):
             "text": "Seleccione una Opción"
         },
         "action": {
-            "button": "Opciones",
+            "button": "Ver Opciones",
             "sections": [
                 {
                     "title": "Inventario",
@@ -175,7 +175,31 @@ def ListMessage(number):
                                 "title": "Bolígrafos",
                                 "description": " "
                         },
-
+                        {
+                                "id": "main-creyones",
+                                "title": "Creyones",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-ganchos",
+                                "title": "Ganchos",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-tijeras",
+                                "title": "Tijeras",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-tirro",
+                                "title": "Tirros",
+                                "description": " "
+                        },
+                        {
+                                "id": "main-boligrafos",
+                                "title": "Bolígrafos",
+                                "description": " "
+                        }
                     ]
                 },
                 {
