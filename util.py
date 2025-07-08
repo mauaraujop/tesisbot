@@ -179,17 +179,17 @@ def ListMessage(number):
                     ]
                 },
                 {
-                    "title": "📍center of attention",
+                    "title": "👨Contáctanos 📞",
                     "rows": [
                         {
-                            "id": "main-agency",
-                            "title": "Agency",
-                            "description": "Your can visit our agency"
+                            "id": "main-asesor",
+                            "title": "Asesor",
+                            "description": " "
                         },
                         {
-                            "id": "main-contact",
-                            "title": "Contact center",
-                            "description": "One of our agents will assist you"
+                            "id": "main-ubicacion",
+                            "title": "Ubicacion",
+                            "description": " "
                         }
                     ]
                 }
