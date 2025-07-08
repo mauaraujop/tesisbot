@@ -129,66 +129,41 @@ def ListMessage(number):
     "interactive": {
         "type": "list",
         "body": {
-            "text": "Para hacer tu búsqueda más eficiente, te presento nuestras opciones clave. ✨ ¿Qué necesitas hoy?"
+            "text": "✅ I have these options"
         },
         "footer": {
-            "text": "Seleccione una Opción"
+            "text": "Select an option"
         },
         "action": {
-            "button": "Opciones",
+            "button": "See options",
             "sections": [
                 {
-                    "title": "Inventario",
+                    "title": "Buy and sell products",
                     "rows": [
                         {
-                            "id": "main-engrapadora",
-                            "title": "Engrapadoras",
-                            "description": "."
+                            "id": "main-buy",
+                            "title": "Buy",
+                            "description": "Buy the best product your home"
                         },
                         {
-                            "id": "main-archivadores",
-                            "title": "Archivadores",
-                            "description": "."
-                        },
-                        {
-                            "id": "main-blocks",
-                            "title": "Blocks",
-                            "description": "."
-                        },
-                        {
-                            "id": "main-cartulinas",
-                            "title": "Cartulinas",
-                            "description": "."
-                        },
-                        {
-                            "id": "main-creyones",
-                            "title": "Creyones",
-                            "description": "."
-                        },
-                        {
-                            "id": "main-boligrafos",
-                            "title": "Bolígrafos",
-                            "description": "."
-                        },
-                        {
-                            "id": "main-",
-                            "title": "Ganchos",
-                            "description": "."
+                            "id": "main-sell",
+                            "title": "Sell",
+                            "description": "Sell your products"
                         }
                     ]
                 },
                 {
-                    "title": "📍Cetro de Atención",
+                    "title": "📍center of attention",
                     "rows": [
                         {
                             "id": "main-agency",
-                            "title": "Contactar un Asesor de Pagos",
-                            "description": "Para efectuar un pago o deuda"
+                            "title": "Agency",
+                            "description": "Your can visit our agency"
                         },
                         {
-                            "id": "main-location",
-                            "title": "Ubicación",
-                            "description": "Puedes visitar nuestra locación"
+                            "id": "main-contact",
+                            "title": "Contact center",
+                            "description": "One of our agents will assist you"
                         }
                     ]
                 }

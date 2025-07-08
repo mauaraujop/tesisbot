@@ -44,7 +44,7 @@ def ProcessMessage(text, number):
     listData = []
 
     if "hola" or "opcion" in text:
-        data = util.TextMessage("👋 ¡Hola! Soy tu asistente virtual de OFICOMP, listo para ayudarte con todo lo que tu oficina necesita. ¿En qué puedo asistirte hoy? Escribe 'Menú' para ver mis opciones o hazme una pregunta. ✨", number)
+        data = util.TextMessage("ey que tal", number)
         dataMenu = util.ListMessage(number)
 
         listData.append(data)
