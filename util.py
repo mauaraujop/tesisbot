@@ -188,7 +188,7 @@ def ListMessage(number):
                         },
                         {
                             "id": "main-ubicacion",
-                            "title": "Ubicacion",
+                            "title": "Ubicación",
                             "description": " "
                         }
                     ]
