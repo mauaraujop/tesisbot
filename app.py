@@ -52,19 +52,26 @@ def ProcessMessage(text, number):
 
     elif "gracias" in text:
         data = util.TextMessage("¡De nada! En OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
+        listData.append(data)
     elif "format" in text:
         data = util.TextFormatMessage(number)
+        listData.append(data)
     elif "image" in text:
         data = util.ImageMessage(number)
+        listData.append(data)
     elif "list" in text:
         data = util.ListMessage(number)
+        listData.append(data)
     elif "button" in text:
             data = util.ButtonsnMessage(number)
+            listData.append(data)
     elif "ubicación" in text:
         data = util.LocationMessage(number)
+        listData.append(data)
 
     else:
         data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
+        listData.append(data)
     
     for item in listData:
         whatsappservice.SendMessageWhatsapp(item)
