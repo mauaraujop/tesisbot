@@ -12,11 +12,15 @@ def SendMessageWhatsapp(data):
         print("5")
         response = requests.post(api_url, data = json.dumps(data), headers = headers)
 
+        # >>>>>>>>>>> ESTAS SON LAS LÍNEAS CLAVE QUE DEBES AÑADIR <<<<<<<<<<<
         if response.status_code == 200:
+            print(f"DEBUG: Mensaje enviado con ÉXITO. Tipo de mensaje: {data.get('type', 'desconocido')}, Status: {response.status_code}")
             return True
-        
-        return False
+        else:
+            # Aquí es donde verás el error si WhatsApp rechaza el mensaje de botón
+            print(f"DEBUG: ERROR al enviar mensaje. Status: {response.status_code}, Cuerpo de la respuesta: {response.text}")
+            print(f"DEBUG: JSON del mensaje fallido: {json.dumps(data, indent=2)}") # Esto te mostrará el JSON exacto que enviaste
+            return False
     except Exception as exception:
-        print(exception)
+        print(f"DEBUG: EXCEPCIÓN al enviar mensaje: {exception}") # Cambiado para que muestre "DEBUG"
         return False
-        
