@@ -184,7 +184,7 @@ def RegresarMessage(number):
                 "interactive": {
                     "type": "button",                   
                     "body": {
-                        "text": "hee"
+                        "text": "Heee"
                     },
                     "action": {
                         "buttons": [
@@ -192,21 +192,21 @@ def RegresarMessage(number):
                                 "type": "reply",
                                 "reply": {
                                     "id": "001",
-                                    "title": "Comprar "
+                                    "title": "Si"
                                 }
                             },
                             {
                                 "type": "reply",
                                 "reply": {
                                     "id": "002",
-                                    "title": " Regresar"
+                                    "title": "No"
                                 }
                             },
                             {
                                 "type": "reply",
                                 "reply": {
                                     "id": "003",
-                                    "title": "Volver a Menú Principal"
+                                    "title": "No se"
                                 }
                             }
                         ]
