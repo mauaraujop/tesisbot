@@ -68,13 +68,15 @@ def ProcessMessage(text, number):
     elif "list" in text:
         data = util.ListMessage(number)
         listData.append(data)
+    elif "hu" in text:
+        data = util.ReturnMessage(number) 
     elif "3" in text:
         data = util.TextMessage("⭐Archivador Lomo Ancho t/carta - Unidad\n⭐Archivador Acordeón Plástico t/carta - Unidad\n⭐Archivador Acordeón Plástico t/oficio - Unidad", number)
         listData.append(data) # Añadimos el mensaje de archivadores a la lista
 
         # Luego, el mensaje de los botones (la función ReturnMessage que definiste)
         # Importante: Pasar 'number' como argumento, no 'dataVolver'
-        dataBotonesVolver = util.ButtonsnMessage(number) 
+        dataBotonesVolver = util.ReturnMessage(number) 
         listData.append(dataBotonesVolver) # Añadimos el mensaje de botones a la lista
     elif "button" in text:
             data = util.ButtonsnMessage(number)
