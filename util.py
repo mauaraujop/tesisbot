@@ -199,14 +199,14 @@ def RegresarMessage(number):
                                 "type": "reply",
                                 "reply": {
                                     "id": "002",
-                                    "title": "No"
+                                    "title": "👈Regresar"
                                 }
                             },
                             {
                                 "type": "reply",
                                 "reply": {
                                     "id": "003",
-                                    "title": "No se"
+                                    "title": "⏪ Menú Principal"
                                 }
                             }
                         ]
