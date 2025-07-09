@@ -174,16 +174,17 @@ def ListMessage(number):
     }
 }
     return data
-def ReturnMessage(number):
+
+def RegresarMessage(number):
     data ={
                 "messaging_product": "whatsapp",
                 "recipient_type": "individual",
                 "to": number,
                 "type": "interactive",
                 "interactive": {
-                    "type": "button",
+                    "type": "button",                   
                     "body": {
-                        "text": "💲¿Deseas realizar una compra?💲"
+                        "text": "Heee"
                     },
                     "action": {
                         "buttons": [
@@ -191,21 +192,21 @@ def ReturnMessage(number):
                                 "type": "reply",
                                 "reply": {
                                     "id": "001",
-                                    "title": "Comprar 💵"
+                                    "title": "Si"
                                 }
                             },
                             {
                                 "type": "reply",
                                 "reply": {
                                     "id": "002",
-                                    "title": "◀ Regresar"
+                                    "title": "No"
                                 }
                             },
                             {
                                 "type": "reply",
                                 "reply": {
                                     "id": "003",
-                                    "title": "⏪ Volver a Menú Principal"
+                                    "title": "No se"
                                 }
                             }
                         ]
@@ -213,6 +214,7 @@ def ReturnMessage(number):
                 }
             }
     return data
+
 def PruebaMessage(number):
     data = {
         "messaging_product": "whatsapp",
