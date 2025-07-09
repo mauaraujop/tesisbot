@@ -68,8 +68,14 @@ def ProcessMessage(text, number):
     elif "list" in text:
         data = util.ListMessage(number)
         listData.append(data)
-    elif "hu" in text:
-        data = util.RegresarMessage(number) 
+    elif "13" in text:
+        data = util.TextMessage("⭐Compás de Precisión (E)\n⭐Compás de Precisión Artesco Mod. 602\n⭐Compás Escolar Artesco Mod. 101", number)
+        listData.append(data) # Añadimos el mensaje de archivadores a la lista
+
+        # Luego, el mensaje de los botones (la función ReturnMessage que definiste)
+        # Importante: Pasar 'number' como argumento, no 'dataVolver'
+        dataBotonesVolver = util.RegresarMessage(number) 
+        listData.append(dataBotonesVolver) # Añadimos el mensaje de botones a la lista    
     elif "3" in text:
         data = util.TextMessage("⭐Archivador Lomo Ancho t/carta - Unidad\n⭐Archivador Acordeón Plástico t/carta - Unidad\n⭐Archivador Acordeón Plástico t/oficio - Unidad", number)
         listData.append(data) # Añadimos el mensaje de archivadores a la lista
