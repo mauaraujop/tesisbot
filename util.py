@@ -114,6 +114,13 @@ def ButtonsnMessage(number):
                                     "id": "002",
                                     "title": "No"
                                 }
+                            },
+                            {
+                                "type": "reply",
+                                "reply": {
+                                    "id": "003",
+                                    "title": "No se"
+                                }
                             }
                         ]
                     }
