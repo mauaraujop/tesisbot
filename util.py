@@ -192,7 +192,7 @@ def RegresarMessage(number):
                                 "type": "reply",
                                 "reply": {
                                     "id": "001",
-                                    "title": "Si"
+                                    "title": "Comprar 💵"
                                 }
                             },
                             {
