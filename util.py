@@ -215,49 +215,35 @@ def RegresarMessage(number):
             }
     return data
 
-def PruebaMessage(number):
-    data = {
-        "messaging_product": "whatsapp",
-        "recipient_type": "individual",
-        "to": number,
-        "type": "interactive",
-        "interactive": {
-            "type": "prueba",
-            "header": {
-                "type": "image",
-                "image": {
-                    "link": "https://images.wikidexcdn.net/mwuploads/wikidex/9/94/latest/20230204063131/EP1229_Oshawott_de_Ash.png"  # Reemplaza con la URL de tu imagen
+def ContactoMessage(number):
+    data ={
+            {
+                "messaging_product": "whatsapp",
+                "recipient_type": "individual",
+                "to": number,
+                "type": "interactive",
+                "interactive": {
+                    "type": "button",
+                    "body": {
+                    "text": "Si necesitas ayuda con tu compra, ¡habla con un asesor!"
+                    },
+                    "action": {
+                    "buttons": [
+                        {
+                        "type": "reply",
+                        "reply": {
+                            "id": "VOLVER_MENU",
+                            "title": "⬅️ Volver al Menú"
+                        }
+                        },
+                        {
+                        "type": "phone_number",
+                        "phone_number": "+584247526123", # <--- ¡Aquí va el número de tu asesor!
+                        "title": "📞 Hablar con Asesor"
+                        }
+                    ]
                 }
-            },
-            "body": {
-                "text": "¡Bienvenido a [Nombre de tu Empresa]! Explora nuestros artículos de oficina y equipos de cómputo."
-            },
-            "action": {
-                "buttons": [
-                    {
-                        "type": "reply",
-                        "reply": {
-                            "id": "001",
-                            "title": "Ver Productos"
-                        }
-                    },
-                    {
-                        "type": "reply",
-                        "reply": {
-                            "id": "002",
-                            "title": "Soporte Técnico"
-                        }
-                    },
-                    {
-                        "type": "reply",
-                        "reply": {
-                            "id": "003",
-                            "title": "Contáctanos"
-                        }
-                    }
-                ]
             }
-        }
-    }
+        }   
+     }
     return data
-
