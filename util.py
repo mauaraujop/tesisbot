@@ -83,49 +83,46 @@ def LocationMessage(number):
     return data
 def ButtonsnMessage(number):
     data ={
-                "messaging_product": "whatsapp",
-                "recipient_type": "individual",
-                "to": number,
-                "type": "interactive",
-                "interactive": {
-                    "type": "button",
-                    "header": {
-                    "type": "image",
-                     "image": {
-                         "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png" 
-                         }
-                     },
-                    
-                    "body": {
-                        "text": "Holaa👽👽👽"
-                    },
-                    "action": {
-                        "buttons": [
-                            {
-                                "type": "reply",
-                                "reply": {
-                                    "id": "001",
-                                    "title": "Si"
-                                }
-                            },
-                            {
-                                "type": "reply",
-                                "reply": {
-                                    "id": "002",
-                                    "title": "No"
-                                }
-                            },
-                            {
-                                "type": "reply",
-                                "reply": {
-                                    "id": "003",
-                                    "title": "No se"
-                                }
-                            }
-                        ]
-                    }
+        "messaging_product": "whatsapp",
+        "recipient_type": "individual",
+        "to": number,
+        "type": "interactive",
+        "interactive": {
+            "type": "button",
+            "header": {
+                "type": "image",
+                "image": {
+                    "link": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png"
                 }
+            },
+            "body": {
+                "text": "Holaa👽👽👽"
+            },
+            "action": {
+                "buttons": [
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "001",
+                            "title": "Si"
+                        }
+                    },
+                    {
+                        "type": "reply",
+                        "reply": {
+                            "id": "002",
+                            "title": "No"
+                        }
+                    },
+                    {
+                        "type": "phone_number", # Tipo de botón de número de teléfono
+                        "phone_number": "+584247526123", # ¡IMPORTANTE: Coloca aquí el número de tu asesor!
+                        "title": "📞 Asesor de Compras" # El texto que se verá en el botón
+                    }
+                ]
             }
+        }
+    }
     return data
 
 def ListMessage(number):
