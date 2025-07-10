@@ -12,7 +12,7 @@ def SendMessageWhatsapp(data):
         print("5")
         response = requests.post(api_url, data = json.dumps(data), headers = headers)
 
-        # >>>>>>>>>>> ESTAS SON LAS LÍNEAS CLAVE QUE DEBES AÑADIR <<<<<<<<<<<
+        
         if response.status_code == 200:
             print(f"DEBUG: Mensaje enviado con ÉXITO. Tipo de mensaje: {data.get('type', 'desconocido')}, Status: {response.status_code}")
             return True
