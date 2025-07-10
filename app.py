@@ -80,6 +80,8 @@ def ProcessMessage(text, number):
     elif "principal" in text:
         data = util.TextMessage("¿Tienes alguna duda?, puedes seleccionar la opción de contacto", number)
         dataMenu = util.ListMessage(number)
+        listData.append(data)
+        listData.append(dataMenu)
 ################################################## INVENTARIO #################################################
     elif "inventario" in text:
         data = util.TextMessage("¿Qué quieres conocer sobre nuestras categorías de productos?\nElige una opción 👇:\n\nAquí tienes nuestras categorías de productos:\n\n1️⃣ Accesorios\n2️⃣ Almohadillas\n3️⃣ Archivadores\n4️⃣ Blocks\n5️⃣ Bolígrafos\n6️⃣ Borradores\n7️⃣ Cajas Chicas\n8️⃣ Carpetas\n9️⃣ Carteleras\n🔟 Chinches\n1️⃣1️⃣ Cintas\n1️⃣2️⃣ Clips\n1️⃣3️⃣ Compases\n1️⃣4️⃣ Correctores\n1️⃣5️⃣ Creyones\n1️⃣6️⃣ Cuchillas\n1️⃣7️⃣ Sobres\n1️⃣8️⃣ Engrapadoras\n1️⃣9️⃣ Tirros\n2️⃣0️⃣ Fichas", number)
