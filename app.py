@@ -67,8 +67,6 @@ def ProcessMessage(text, number):
     elif "audio" in text: 
         data = util.AudioMessage(number) 
         listData.append(data)
-    elif "comprar" in text:
-        data = util.TextMessage("Para realizar una compra com ", number)
     elif "list" in text:
         data = util.ListMessage(number)
         listData.append(data)
@@ -200,7 +198,7 @@ def ProcessMessage(text, number):
         listData.append(dataBotonesVolver)
 
     elif "19" in text: # Sobres
-        data = util.TextMessage("📦Productos de Escarchas (Pendiente de definir)", number) 
+        data = util.TextMessage("📦Sobres (Pendiente de definir)", number) 
         dataBotonesVolver = util.RegresarMessage(number)
         listData.append(dataBotonesVolver)
 
