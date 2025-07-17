@@ -50,7 +50,10 @@ def ProcessMessage(text, number):
         listData.append(data)
         listData.append(dataMenu)
     elif "contacto" in text:
-        data = util.TextMessage("¡Hola! 😊\n\nSi necesitas hablar directamente con uno de nuestros asesores para resolver dudas o recibir atención personalizada, haz clic en el siguiente enlace y tu mensaje se enviará automáticamente:\n\n📞 Chatea con un Asesor OFICOMP aquí:\nhttps://wa.me/584247526123?text=Hola%2C%20ten%C3%ADa%20una%20duda%20con%20respecto%20a%20algo\n\n¡Estamos listos para ayudarte!", number)
+        data = util.TextMessage("¡Hola! 😊\n\nSi necesitas hablar directamente con uno de nuestros asesores para resolver dudas o recibir atención personalizada, haz clic en el siguiente enlace y tu mensaje se enviará automáticamente:\n\n📞 Chatea con un Asesor OFICOMP aquí:\nhttps://wa.me/584147171542?text=Hola%2C%20ten%C3%ADa%20una%20duda%20con%20respecto%20a%20algo\n\n¡Estamos listos para ayudarte!", number)
+        listData.append(data)
+    elif "comprar" in text:
+        data = util.TextMessage("¡Perfecto! ✨ ¿Estás listo(a) para hacer tu compra? 💰\n\nIngresa a este enlace para hablar directamente con nuestro asesor de ventas y él te guiará en todo el proceso:\n\n🛒 Chatea con Ventas aquí:\nhttps://wa.me/584147171542?text=Me%20gustar%C3%ADa%20hacer%20una%20compra\n\n¡Esperamos tu mensaje!", number)
         listData.append(data)
     elif "gracias" in text:
         data = util.TextMessage("¡A su Orden! En A.C OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
@@ -70,9 +73,6 @@ def ProcessMessage(text, number):
         data = util.ListMessage(number)
         listData.append(data)
     elif "button" in text:
-            data = util.ButtonsnMessage(number)
-            listData.append(data)
-    elif "contacto" in text:
             data = util.ButtonsnMessage(number)
             listData.append(data)
     elif "ubicación" in text:

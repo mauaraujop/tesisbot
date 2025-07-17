@@ -17,9 +17,9 @@ def SendMessageWhatsapp(data):
             print(f"DEBUG: Mensaje enviado con ÉXITO. Tipo de mensaje: {data.get('type', 'desconocido')}, Status: {response.status_code}")
             return True
         else:
-            # Aquí es donde verás el error si WhatsApp rechaza el mensaje de botón
+            # El error si WhatsApp rechaza el mensaje de botón
             print(f"DEBUG: ERROR al enviar mensaje. Status: {response.status_code}, Cuerpo de la respuesta: {response.text}")
-            print(f"DEBUG: JSON del mensaje fallido: {json.dumps(data, indent=2)}") # Esto te mostrará el JSON exacto que enviaste
+            print(f"DEBUG: JSON del mensaje fallido: {json.dumps(data, indent=2)}") # Muestra el JSON exacto que se envió
             return False
     except Exception as exception:
         print(f"DEBUG: EXCEPCIÓN al enviar mensaje: {exception}") # Cambiado para que muestre "DEBUG"
