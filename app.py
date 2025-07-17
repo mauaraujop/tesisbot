@@ -14,7 +14,7 @@ def VerifyToken():
         token = request.args.get("hub.verify_token")
         challenge = request.args.get("hub.challenge")
 
-        if token is not None and challenge is not None and token == accessToken: # Cambié "is None" por "!=" y "is not None"
+        if token is not None and challenge is not None and token == accessToken: 
             return challenge
         else:
             return "", 400
@@ -49,8 +49,9 @@ def ProcessMessage(text, number):
     
         listData.append(data)
         listData.append(dataMenu)
-    elif "contáctanos" in text:
-        data = util.TextMessage("👋 ¿Alguna duda referente al procesamiento del pago?", number)
+    elif "contacto" in text:
+        data = util.TextMessage("¡Hola! 😊\n\nSi necesitas hablar directamente con uno de nuestros asesores para resolver dudas o recibir atención personalizada, haz clic en el siguiente enlace y tu mensaje se enviará automáticamente:\n\n📞 Chatea con un Asesor OFICOMP aquí:\nhttps://wa.me/584247526123?text=Hola%2C%20ten%C3%ADa%20una%20duda%20con%20respecto%20a%20algo\n\n¡Estamos listos para ayudarte!", number)
+        listData.append(data)
     elif "gracias" in text:
         data = util.TextMessage("¡A su Orden! En A.C OFICOMP estamos para servirte. ¿Hay algo más en lo que pueda ayudarte?'. ", number)
         listData.append(data)
@@ -69,6 +70,9 @@ def ProcessMessage(text, number):
         data = util.ListMessage(number)
         listData.append(data)
     elif "button" in text:
+            data = util.ButtonsnMessage(number)
+            listData.append(data)
+    elif "contacto" in text:
             data = util.ButtonsnMessage(number)
             listData.append(data)
     elif "ubicación" in text:
@@ -183,8 +187,8 @@ def ProcessMessage(text, number):
         dataBotonesVolver = util.RegresarMessage(number)
         listData.append(dataBotonesVolver)
 
-    elif "17" in text: # Cuenta Fácil (Si tienes productos, ponlos aquí. De lo contrario, dejará solo los botones de volver.)
-        data = util.TextMessage("📦Productos de Cuenta Fácil (Pendiente de definir)", number) # O vacío si no hay productos aún
+    elif "17" in text: # Tirros
+        data = util.TextMessage("📦Tirro Celoven 1240 1/2\"\n📦Tirro Celoven 3440 3/4\"\n📦Tirro Celoven 2140 2\"\n📦Tirro P/embalar Morropac Transparente x 90 Mts.\n📦Tirro Celoven 1140 1\"", number)
         listData.append(data)
         dataBotonesVolver = util.RegresarMessage(number)
         listData.append(dataBotonesVolver)
@@ -195,9 +199,8 @@ def ProcessMessage(text, number):
         dataBotonesVolver = util.RegresarMessage(number)
         listData.append(dataBotonesVolver)
 
-    elif "19" in text: # Escarchas (Si tienes productos, ponlos aquí. De lo contrario, dejará solo los botones de volver.)
-        data = util.TextMessage("📦Productos de Escarchas (Pendiente de definir)", number) # O vacío si no hay productos aún
-        listData.append(data)
+    elif "19" in text: # Sobres
+        data = util.TextMessage("📦Productos de Escarchas (Pendiente de definir)", number) 
         dataBotonesVolver = util.RegresarMessage(number)
         listData.append(dataBotonesVolver)
 
@@ -209,34 +212,11 @@ def ProcessMessage(text, number):
 
     
     else:
-        data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Hola*\n👉 *Gracias*",number)
+        data = util.TextMessage("*¡Vaya!*No consigo entender a qué te refieres 😢 .\n\nAquí tienes algunos de los temas en los que puedo ayudarte:\n👉 *Opcion*",number)
         listData.append(data)
         
     for item in listData:
         whatsappservice.SendMessageWhatsapp(item)
-
-def GenerateMessage(text, number):
-    text = text.lower()
-    if "format" in text:
-        data = util.TextFormatMessage(number)
-    if "image" in text:
-        data = util.ImageMessage(number)
-    if "audio" in text:
-        data = util.AudioMessage(number)
-    if "location" in text:
-        data = util.LocationMessage(number)
-    if "button" in text:
-        data = util.ButtonsnMessage(number)
-    if "list" in text:
-        data = util.ListMessage(number)
-    if "prueba" in text:
-        data = util.PruebaMessage(number)
-    else:
-        # Si ninguna palabra clave anterior coincide, envía un mensaje por defecto
-        data = util.TextMessage("Lo siento, no entendí tu mensaje. Intenta decir 'hola' o 'menu'.", number)
-
-    whatsappservice.SendMessageWhatsapp(data)
-
 
 if(__name__ == "__main__"):
     app.run(debug=True)
