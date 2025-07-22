@@ -5,7 +5,7 @@ def GetResponse(text):
     try:
         openrouter_base_url = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
         openrouter_api_key = os.environ.get("OPENROUTER_API_KEY")
-        openrouter_model = os.environ.get("OPENROUTER_MODEL", "google/gemini-2.5-flash-lite") 
+        openrouter_model = os.environ.get("OPENROUTER_MODEL", "moonshot-ai/kimi-k2") 
 
         # --- NUEVAS LÍNEAS PARA DEPURACIÓN ---
         print(f"DEBUG: Intentando conectar a base_url: {openrouter_base_url}")
