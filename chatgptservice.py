@@ -1,39 +1,47 @@
-import openai
 import os
+from groq import Groq # Importamos la clase Groq directamente
 
 def GetResponse(text):
     try:
-        openrouter_base_url = os.environ.get("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
-        openrouter_api_key = os.environ.get("OPENROUTER_API_KEY")
-        openrouter_model = os.environ.get("OPENROUTER_MODEL", "moonshot-ai/kimi-k2") 
+        # Tu API Key de Groq (la obtendrás de las variables de entorno)
+        groq_api_key = os.environ.get("GROQ_API_KEY")
+        
+        # El modelo de Groq a usar (Mixtral 8x7b es muy popular por su velocidad)
+        # Puedes ver otros modelos en console.groq.com/docs/models
+        groq_model = os.environ.get("GROQ_MODEL", "mixtral-8x7b-32768") 
+
+        # Inicializa el cliente de Groq
+        client = Groq(api_key=groq_api_key)
 
         # --- NUEVAS LÍNEAS PARA DEPURACIÓN ---
-        print(f"DEBUG: Intentando conectar a base_url: {openrouter_base_url}")
-        print(f"DEBUG: Usando modelo: {openrouter_model}")
-        # NO imprimas la API Key completa por seguridad, solo una parte si es necesario
-        print(f"DEBUG: API Key (parcial): {openrouter_api_key[:5]}...") 
+        print(f"DEBUG: Intentando conectar a Groq. Usando modelo: {groq_model}")
+        if groq_api_key:
+            print(f"DEBUG: API Key Groq (parcial): {groq_api_key[:5]}...") 
+        else:
+            print("DEBUG: API Key Groq no cargada (es None).")
         # --- FIN NUEVAS LÍNEAS PARA DEPURACIÓN ---
 
-        client = openai.OpenAI(
-            base_url=openrouter_base_url,
-            api_key=openrouter_api_key,
-        )
-
-        result = client.chat.completions.create(
-            model=openrouter_model,
+        # Realiza la llamada a la API de chat completions de Groq
+        chat_completion = client.chat.completions.create(
             messages=[
-                {"role": "user", "content": text}
+                {
+                    "role": "user",
+                    "content": text,
+                }
             ],
-            n=1,
-            max_tokens=500
+            model=groq_model,
+            temperature=0.7, # Puedes ajustar la creatividad del modelo
+            max_tokens=500,
+            top_p=1,
+            stop=None,
+            stream=False, # No usaremos streaming por ahora
         )
-
-        response = result.choices[0].message.content
+        
+        # Accede al contenido de la respuesta
+        response = chat_completion.choices[0].message.content
         return response
-
-    except openai.APIError as e:
-        print(f"Error de la API de OpenRouter: {e}")
-        return "Lo siento, hubo un problema con la API de OpenRouter."
+    
     except Exception as e:
-        print(f"Ocurrió un error inesperado: {e}")
-        return "Lo siento, ocurrió un error inesperado."
+        # Groq no tiene un 'APIError' específico como OpenAI, así que capturamos Exception
+        print(f"Ocurrió un error al conectar con Groq o procesar la respuesta: {e}")
+        return "Lo siento, hubo un problema al procesar tu solicitud con Groq."
