@@ -8,7 +8,7 @@ def GetResponse(text):
         
         # El modelo de Groq a usar (Mixtral 8x7b es muy popular por su velocidad)
         # Puedes ver otros modelos en console.groq.com/docs/models
-        groq_model = os.environ.get("GROQ_MODEL", "mixtral-8x7b-32768") 
+        groq_model = os.environ.get("GROQ_MODEL", "llama3-8b-8192") 
 
         # Inicializa el cliente de Groq
         client = Groq(api_key=groq_api_key)
